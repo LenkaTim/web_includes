@@ -24,11 +24,12 @@
         <!-- Unter-Navigation -->
         <script>
 function unternavigation() {
-    this.name = "{{ page.title }}";
+    this.name = "";
     var myObj = document.getElementById(this.name);
     myObj.className = "active";
 };
-
-        </script>
+unternavigation.name = "{{ page.title }}";
+unternavigation();
+</script>
     </body>
 </html>
