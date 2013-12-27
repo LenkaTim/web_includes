@@ -23,6 +23,13 @@
 
         <!-- Unter-Navigation -->
         <script>
+        var navigation    = new Object;
+unternavigation.name   = "";
+unternavigation.light  = function()
+{
+  var myObj = document.getElementById(unternavigation.name);
+  myObj.className = "active";
+};
             navigation.name = "{{ page.title }}";
             navigation.light();
         </script>
