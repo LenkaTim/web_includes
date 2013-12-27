@@ -23,11 +23,8 @@
 
         <!-- Unter-Navigation -->
         <script>
-function unternavigation(name) {
-    var myObj = document.getElementById(name);
-    myObj.className = "active";
-};
-unternavigation("{{ page.title }}");
+  var myObj = document.getElementById("{{ page.title }}");
+  myObj.className = "active";
         </script>
     </body>
 </html>
