@@ -9,7 +9,7 @@
     <!-- Loader-JS -->
     <script type="text/javascript">
       function LoadJS(server, script){
-    if(server = "cdn"){
+    if(server == "cdn"){
         var server = 'http://feg.cdnconnect.com/js/';
     }
     var s = document.getElementsByTagName('script')[0],
@@ -20,10 +20,10 @@
     s.parentNode.insertBefore(p, s);
 }
 function LoadCSS(server, stylesheet) {
-    if(server = "cdn"){
+    if(server == "cdn"){
         var server = 'http://feg.cdnconnect.com/css/';
     }
-    if(server = "bootstrapcdn") {
+    if(server == "bootstrapcdn") {
         var server = '//netdna.bootstrapcdn.com/font-awesome/4.0.3/css/';
     }
     var s = document.getElementsByTagName('link')[0],
@@ -52,19 +52,6 @@ function countdown(ziel, datum) {
     var ausgabe = Math.floor(differenz / (1000 * 60 * 60 * 24));
     document.write("Noch " + ausgabe + " Tag(e) bis zum " + ziel);
 }
-    </script>
-    <title>
-      FEG | Friedrich-Eugens-Gymnasium Stuttgart
-    </title>
-    
-    <link rel="shortcut icon" href="/favicon.ico"/>
-    
-    <script type="text/javascript">
-      LoadJS("cdn", "index");        //Basis-JS
-      LoadCSS("cdn", "index");	    //Basis-CSS
-      LoadCSS("bootstrapcdn", "font-awesome.min"); //Icons
-    </script>
-    
   </head>
   <body>
     <div class="container">
