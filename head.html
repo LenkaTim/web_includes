@@ -8,59 +8,19 @@
     <link>
     <!-- Loader-JS -->
     <script type="text/javascript">
-      function LoadJS(server, script){
-    if(server == "cdn"){
-        var server = 'http://feg.cdnconnect.com/js/';
-    }
-    var s = document.getElementsByTagName('script')[0],
-        p = document.createElement('script');
-    p.type = 'text/javascript';
-    p.src = server + script + ".js";
-    p.async = 'async';
-    s.parentNode.insertBefore(p, s);
-}
-function LoadCSS(server, stylesheet) {
-    if(server == "cdn"){
-        var server = 'http://feg.cdnconnect.com/css/';
-    }
-    if(server == "bootstrapcdn") {
-        var server = '//netdna.bootstrapcdn.com/font-awesome/4.0.3/css/';
-    }
-    var s = document.getElementsByTagName('link')[0],
-        p = document.createElement('link');
-    p.rel = 'stylesheet';
-    p.type = 'text/css';
-    p.href =  server + stylesheet + ".css";
-    s.parentNode.insertBefore(p, s);
-}
-function highlight(id) {
-    var myObj = document.getElementById(id);
-    myObj.className = "active";
-}
-
-function unternavigation(id) {
-    var myObj = document.getElementById(id);
-    myObj.className = "list-group-item active";
-}
-
-function countdown(ziel, datum) {
-    var schulbeginn = new Date(datum);
-    var jetzt = new Date();
-    var schulbeginn = schulbeginn.getTime();
-    var jetzt = jetzt.getTime();
-    var differenz = schulbeginn - jetzt;
-    var ausgabe = Math.floor(differenz / (1000 * 60 * 60 * 24));
-    document.write("Noch " + ausgabe + " Tag(e) bis zum " + ziel);
-}
-</script>
-      <title>
-        FEG | Friedrich-Eugens-Gymnasium Stuttgart
-        </title>
-      <script type="text/javascript">
-        LoadJS("cdn", "index");        //Basis-JS
-        LoadCSS("cdn", "index");      //Basis-CSS
-       LoadCSS("bootstrapcdn", "font-awesome.min"); //Icons
-      </script>
+      function LoadJS(a,b){if("cdn"==a)var a="http://feg.cdnconnect.com/js/";var c=document.getElementsByTagName("script")[0],d=document.createElement("script");d.type="text/javascript",d.src=a+b+".js",d.async="async",c.parentNode.insertBefore(d,c)}function LoadCSS(a,b){if("cdn"==a)var a="http://feg.cdnconnect.com/css/";if("bootstrapcdn"==a)var a="//netdna.bootstrapcdn.com/font-awesome/4.0.3/css/";var c=document.getElementsByTagName("link")[0],d=document.createElement("link");d.rel="stylesheet",d.type="text/css",d.href=a+b+".css",c.parentNode.insertBefore(d,c)}function highlight(a){var b=document.getElementById(a);b.className="active"}function unternavigation(a){var b=document.getElementById(a);b.className="list-group-item active"}function countdown(a,b){var c=new Date(b),d=new Date,c=c.getTime(),d=d.getTime(),e=c-d,f=Math.floor(e/864e5);document.write("Noch "+f+" Tag(e) bis zum "+a)}
+    </script>
+    <title>
+      FEG | Friedrich-Eugens-Gymnasium Stuttgart
+    </title>
+    <script type="text/javascript">
+      LoadJS("cdn", "index");
+      //Basis-JS
+      LoadCSS("cdn", "index");
+      //Basis-CSS
+        LoadCSS("bootstrapcdn", "font-awesome.min");
+        //Icons
+    </script>
   </head>
   <body>
     <div class="container">
@@ -78,61 +38,90 @@ function countdown(ziel, datum) {
               <span class="icon-bar">
               </span>
             </button>
-            <!--            <div id="bilder"width: 100%;
+            <!--            
+<div id="bilder"width: 100%;
 overflow: hidden;
 overflow-y:hidden;
 overflow-x:hidden;
 padding-top: 0px;	
-><table cellspacing="0">
-  <tbody><tr>
-    <td style="	width: 100%;
-	border: none;
-	padding: 0;
-	/*height: 50px;*/"><img src="http://www.feg-stuttgart.de/wp-content/themes/FEG/bilder/a1.jpg" alt="Bild Kopfzeile"></td>
-    <td style="	width: 100%;
-	border: none;
-	padding: 0;
-	/*height: 50px;*/"><img src="http://www.feg-stuttgart.de/wp-content/themes/FEG/bilder/a2.jpg" alt="Bild Kopfzeile"></td>
-    <td style="	width: 100%;
-	border: none;
-	padding: 0;
-	/*height: 50px;*/"><img src="http://www.feg-stuttgart.de/wp-content/themes/FEG/bilder/a3.jpg" alt="Bild Kopfzeile"></td>
-    <td style="	width: 100%;
-	border: none;
-	padding: 0;
-	/*height: 50px;*/"><img src="http://www.feg-stuttgart.de/wp-content/themes/FEG/bilder/a4.jpg" alt="Bild Kopfzeile"></td>
-    <td style="	width: 100%;
-	border: none;
-	padding: 0;
-	/*height: 50px;*/"><img src="http://www.feg-stuttgart.de/wp-content/themes/FEG/bilder/a5.jpg" alt="Bild Kopfzeile"></td>
-    <td style="	width: 100%;
-	border: none;
-	padding: 0;
-	/*height: 50px;*/"><img src="http://www.feg-stuttgart.de/wp-content/themes/FEG/bilder/a6.jpg" alt="Bild Kopfzeile"></td>
-    <td style="	width: 100%;
-	border: none;
-	padding: 0;
-	/*height: 50px;*/"><img src="http://www.feg-stuttgart.de/wp-content/themes/FEG/bilder/a7.jpg" alt="Bild Kopfzeile"></td>
-    <td style="	width: 100%;
-	border: none;
-	padding: 0;
-	/*height: 50px;*/"><img src="http://www.feg-stuttgart.de/wp-content/themes/FEG/bilder/a8.jpg" alt="Bild Kopfzeile"></td>
-    <td style="	width: 100%;
-	border: none;
-	padding: 0;
-	/*height: 50px;*/"><img src="http://www.feg-stuttgart.de/wp-content/themes/FEG/bilder/a9.jpg" alt="Bild Kopfzeile"></td>
-	<td><img src="http://www.feg-stuttgart.de/wp-content/themes/FEG/bilder/a10.jpg" alt="Bild Kopfzeile "></td>
-    <td style="	width: 100%;
-	border: none;
-	padding: 0;
-	/*height: 50px;*/"><img src="http://www.feg-stuttgart.de/wp-content/themes/FEG/bilder/a11.jpg" alt="Bild Kopfzeile"></td>
-    <td style="	width: 100%;
-	border: none;
-	padding: 0;
-	/*height: 50px;*/"><img src="http://www.feg-stuttgart.de/wp-content/themes/FEG/bilder/a12.jpg" alt="Bild Kopfzeile"></td>
-  </tr>
-</tbody></table>
-</div>-->
+>
+<table cellspacing="0">
+<tbody>
+<tr>
+<td style="	width: 100%;
+border: none;
+padding: 0;
+/*height: 50px;*/">
+<img src="http://www.feg-stuttgart.de/wp-content/themes/FEG/bilder/a1.jpg" alt="Bild Kopfzeile">
+</td>
+<td style="	width: 100%;
+border: none;
+padding: 0;
+/*height: 50px;*/">
+<img src="http://www.feg-stuttgart.de/wp-content/themes/FEG/bilder/a2.jpg" alt="Bild Kopfzeile">
+</td>
+<td style="	width: 100%;
+border: none;
+padding: 0;
+/*height: 50px;*/">
+<img src="http://www.feg-stuttgart.de/wp-content/themes/FEG/bilder/a3.jpg" alt="Bild Kopfzeile">
+</td>
+<td style="	width: 100%;
+border: none;
+padding: 0;
+/*height: 50px;*/">
+<img src="http://www.feg-stuttgart.de/wp-content/themes/FEG/bilder/a4.jpg" alt="Bild Kopfzeile">
+</td>
+<td style="	width: 100%;
+border: none;
+padding: 0;
+/*height: 50px;*/">
+<img src="http://www.feg-stuttgart.de/wp-content/themes/FEG/bilder/a5.jpg" alt="Bild Kopfzeile">
+</td>
+<td style="	width: 100%;
+border: none;
+padding: 0;
+/*height: 50px;*/">
+<img src="http://www.feg-stuttgart.de/wp-content/themes/FEG/bilder/a6.jpg" alt="Bild Kopfzeile">
+</td>
+<td style="	width: 100%;
+border: none;
+padding: 0;
+/*height: 50px;*/">
+<img src="http://www.feg-stuttgart.de/wp-content/themes/FEG/bilder/a7.jpg" alt="Bild Kopfzeile">
+</td>
+<td style="	width: 100%;
+border: none;
+padding: 0;
+/*height: 50px;*/">
+<img src="http://www.feg-stuttgart.de/wp-content/themes/FEG/bilder/a8.jpg" alt="Bild Kopfzeile">
+</td>
+<td style="	width: 100%;
+border: none;
+padding: 0;
+/*height: 50px;*/">
+<img src="http://www.feg-stuttgart.de/wp-content/themes/FEG/bilder/a9.jpg" alt="Bild Kopfzeile">
+</td>
+<td>
+<img src="http://www.feg-stuttgart.de/wp-content/themes/FEG/bilder/a10.jpg" alt="Bild Kopfzeile ">
+</td>
+<td style="	width: 100%;
+border: none;
+padding: 0;
+/*height: 50px;*/">
+<img src="http://www.feg-stuttgart.de/wp-content/themes/FEG/bilder/a11.jpg" alt="Bild Kopfzeile">
+</td>
+<td style="	width: 100%;
+border: none;
+padding: 0;
+/*height: 50px;*/">
+<img src="http://www.feg-stuttgart.de/wp-content/themes/FEG/bilder/a12.jpg" alt="Bild Kopfzeile">
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+-->
           </div>
           <div class="navbar-collapse collapse">
             <ul class="nav navbar-nav">
@@ -196,5 +185,5 @@ padding-top: 0px;
             </ul>
           </div>
           <!--/.nav-collapse -->
+        </div>
       </div>
-    </div>
